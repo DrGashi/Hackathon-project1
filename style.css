@@ -5,32 +5,27 @@ body {
     background: #f0f2f5;
     color: #333;
 }
-
 header {
     background-image: linear-gradient(90deg,#004794, #0059b7, #007BFF, #0059b7, #004794);
     color: white;
     padding: 20px;
     text-align: center;
 }
-
 main {
     padding: 20px;
     max-width: 600px;
     margin: auto;
 }
-
 .form-section {
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 form label {
     display: block;
     margin-top: 15px;
 }
-
 form select, form button {
     width: 100%;
     padding: 10px;
@@ -38,14 +33,16 @@ form select, form button {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-
 form button {
     background-color: #007BFF;
     color: white;
     cursor: pointer;
     margin-top: 20px;
+    transition: 0.5s ease-in-out;
 }
-
+form button:hover{
+    background-color: #0059b7;
+}
 #recommendation {
     margin-top: 30px;
     padding: 20px;
@@ -59,6 +56,9 @@ form button {
 }
 #result p::before{
     content: "- ";
+    color: #007BFF;
+    font-size: 25px;
+    font-weight: bold;
 }
 #result p {
     margin: 10px 20px;
@@ -68,7 +68,6 @@ nav {
     background-color: transparent;
     padding: 10px;
 }
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -77,17 +76,21 @@ nav ul {
     justify-content: center;
     gap: 20px;
 }
-
 nav ul li {
     display: inline;
 }
-
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    background-image: linear-gradient(to left, transparent, transparent 50%, white 50%, white);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+    padding: 4px 16px;
+    border-radius: 10px;
 }
-
 nav ul li a:hover {
-    text-decoration: underline;
+    background-position: 0 0;
+    color: #007BFF;
 }

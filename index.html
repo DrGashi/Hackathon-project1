@@ -13,9 +13,9 @@
             <ul>
                 <li><a href="index.html">Car Recommender</a></li>
                 <li><a href="database.html">Car Database</a></li>
+                <li><a href="brands.html">Brands</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
@@ -24,9 +24,10 @@
             <form id="car-form">
                 <label for="budget">Budget:</label>
                 <select id="budget">
-                    <option value="low">Under $20,000</option>
-                    <option value="mid">$20,000 - $40,000</option>
+                    <option value="low">Below $20,000</option>
+                    <option value="mid">20k - 40k</option>
                     <option value="high">Above $40,000</option>
+                    <option value="very high">Above $100,000</option>
                 </select>
 
                 <label for="type">Car Type:</label>
@@ -34,49 +35,62 @@
                     <option value="sedan">Sedan</option>
                     <option value="suv">SUV</option>
                     <option value="truck">Truck</option>
-                    <option value="electric">Electric</option>
+                    <option value="wagon">Wagon</option>
                     <option value="hatchback">Hatchback</option>
-                    <option value="coupe">Coupe</option>
+                    <option value="coupe">Coupé</option>
                 </select>
 
                 <label for="fuel">Fuel Type:</label>
                 <select id="fuel">
-                    <option value="gasoline">Gasoline</option>
+                    <option value="gas">Gasoline</option>
                     <option value="diesel">Diesel</option>
                     <option value="electric">Electric</option>
                     <option value="hybrid">Hybrid</option>
-                </select>
-
-                <label for="transmission">Transmission:</label>
-                <select id="transmission">
-                    <option value="automatic">Automatic</option>
-                    <option value="manual">Manual</option>
                 </select>
 
                 <label for="brand">Preferred Brand (optional):</label>
                 <select id="brand">
                     <option value="any">Any</option>
                     <option value="toyota">Toyota</option>
-                    <option value="hyundai">Hyundai</option>
-                    <option value="chevrolet">Chevrolet</option>
-                    <option value="honda">Honda</option>
                     <option value="tesla">Tesla</option>
                     <option value="ford">Ford</option>
                     <option value="bmw">BMW</option>
-                    <option value="mazda">Mazda</option>
-                    <option value="nissan">Nissan</option>
-                    <option value="kia">Kia</option>
-                    <option value="subaru">Subaru</option>
-                    <option value="audi">Audi</option>
-                    <option value="jeep">Jeep</option>
                     <option value="volkswagen">Volkswagen</option>
-                    <option value="mercedes-benz">Mercedes-Benz</option>
-                    <option value="volvo">Volvo</option>
-                    <option value="mini">Mini</option>
-                    <option value="chrysler">Chrysler</option>
-                    <option value="lucid">Lucid</option>
+                    <option value="audi">Audi</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="honda">Honda</option>
+                    <option value="hyundai">Hyundai</option>
+                    <option value="kia">Kia</option>
+                    <option value="jeep">Jeep</option>
+                    <option value="subaru">Subaru</option>
                     <option value="rivian">Rivian</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="mazda">Mazda</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="lucid">Lucid</option>
+                    <option value="lexus">Lexus</option>
+                    <option value="volvo">Volvo</option>
                     <option value="mitsubishi">Mitsubishi</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="maserati">Maserati</option>
+                    <option value="bentley">Bentley</option>
+                    <option value="aston martin">Aston Martin</option>
+                    <option value="porsche">Porsche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="lamborghini">Lamborghini</option>
+                    <option value="mclaren">McLaren</option>
+                    <option value="bugatti">Bugatti</option>
+                    <option value="koenigsegg">Koenigsegg</option>
+                    <option value="pagani">Pagani</option>
+                    <option value="ram">RAM</option>
+                    <option value="genesis">Genesis</option>
+                    <option value="mini">Mini</option>
+                    <option value="polestar">Polestar</option>
+                    <option value="lincoln">Lincoln</option>
+                    <option value="gmc">GMC</option>
+                    <option value="cadillac">Cadillac</option>
+                    <option value="alfa romeo">Alfa Romeo</option>
+                    <option value="peugeot">Peugeot</option>
                 </select>
 
                 <button type="submit">Recommend Car</button>

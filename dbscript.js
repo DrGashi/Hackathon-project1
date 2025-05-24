@@ -1,54 +1,84 @@
 var cars = [
-    { name: "Toyota Corolla", budget: "low", type: "sedan", fuel: "gasoline", transmission: "automatic", brand: "toyota" },
-    { name: "Hyundai Ioniq 5", budget: "low", type: "suv", fuel: "gasoline", transmission: "manual", brand: "hyundai" },
-    { name: "Chevrolet Bolt", budget: "low", type: "electric", fuel: "electric", transmission: "automatic", brand: "chevrolet" },
-    { name: "Honda Civic", budget: "mid", type: "sedan", fuel: "gasoline", transmission: "automatic", brand: "honda" },
-    { name: "Tesla Model 3", budget: "mid", type: "electric", fuel: "electric", transmission: "automatic", brand: "tesla" },
-    { name: "Ford F-150", budget: "high", type: "truck", fuel: "gasoline", transmission: "automatic", brand: "ford" },
-    { name: "Toyota Prius", budget: "mid", type: "hatchback", fuel: "hybrid", transmission: "automatic", brand: "toyota" },
-    { name: "BMW 3 Series", budget: "high", type: "sedan", fuel: "gasoline", transmission: "manual", brand: "bmw" },
-    { name: "Mazda CX-5", budget: "mid", type: "suv", fuel: "gasoline", transmission: "automatic", brand: "mazda" },
-    { name: "Nissan Leaf", budget: "mid", type: "hatchback", fuel: "electric", transmission: "automatic", brand: "nissan" },
-    { name: "Toyota Yaris", budget: "mid", type: "hatchback", fuel: "electric", transmission: "automatic", brand: "toyota" },
-    { name: "Kia Rio", budget: "low", type: "sedan", fuel: "gasoline", transmission: "manual", brand: "kia" },
-    { name: "Subaru Outback", budget: "mid", type: "wagon", fuel: "gasoline", transmission: "automatic", brand: "subaru" },
-    { name: "Audi A4", budget: "high", type: "sedan", fuel: "gasoline", transmission: "automatic", brand: "audi" },
-    { name: "Jeep Wrangler", budget: "high", type: "suv", fuel: "gasoline", transmission: "manual", brand: "jeep" },
-    { name: "Volkswagen Golf", budget: "mid", type: "hatchback", fuel: "gasoline", transmission: "manual", brand: "volkswagen" },
-    { name: "Hyundai Elantra", budget: "low", type: "sedan", fuel: "gasoline", transmission: "automatic", brand: "hyundai" },
-    { name: "Chevrolet Tahoe", budget: "high", type: "suv", fuel: "gasoline", transmission: "automatic", brand: "chevrolet" },
-    { name: "Ford Mustang", budget: "high", type: "coupe", fuel: "gasoline", transmission: "manual", brand: "ford" },
-    { name: "Tesla Model X", budget: "high", type: "suv", fuel: "electric", transmission: "automatic", brand: "tesla" },
-    { name: "Honda Fit", budget: "low", type: "hatchback", fuel: "gasoline", transmission: "automatic", brand: "honda" },
-    { name: "Nissan Rogue", budget: "mid", type: "suv", fuel: "gasoline", transmission: "automatic", brand: "nissan" },
-    { name: "Toyota Tacoma", budget: "mid", type: "truck", fuel: "gasoline", transmission: "manual", brand: "toyota" },
-    { name: "BMW i3", budget: "mid", type: "hatchback", fuel: "electric", transmission: "automatic", brand: "bmw" },
-    { name: "Mercedes-Benz C-Class", budget: "high", type: "sedan", fuel: "gasoline", transmission: "automatic", brand: "mercedes-benz" },
-    { name: "Volvo XC40", budget: "high", type: "suv", fuel: "electric", transmission: "automatic", brand: "volvo" },
-    { name: "Mini Cooper", budget: "mid", type: "hatchback", fuel: "gasoline", transmission: "manual", brand: "mini" },
-    { name: "Chrysler Pacifica", budget: "high", type: "van", fuel: "hybrid", transmission: "automatic", brand: "chrysler" },
-    { name: "Lucid Air", budget: "high", type: "sedan", fuel: "electric", transmission: "automatic", brand: "lucid" },
-    { name: "Rivian R1T", budget: "high", type: "truck", fuel: "electric", transmission: "automatic", brand: "rivian" },
-    { name: "Mitsubishi Mirage", budget: "low", type: "hatchback", fuel: "gasoline", transmission: "manual", brand: "mitsubishi" },
-    { name: "Ford Focus", budget: "low", type: "hatchback", fuel: "gasoline", transmission: "manual", brand: "ford" },
-    { name: "Toyota GR Yaris", budget: "low", type: "hatchback", fuel: "gasoline", transmission: "manual", brand: "toyota" }
+    { name: "2024 Toyota Corolla", budget: "low", type: "sedan", fuel: "gas", brand: "toyota"},
+    { name: "2025 Tesla Model 3", budget: "high", type: "sedan", fuel: "electric", brand: "tesla"},
+    { name: "2020 Ford F-150", budget: "mid", type: "truck", fuel: "gas", brand: "ford"},
+    { name: "2015 BMW X5", budget: "high", type: "suv", fuel: "gas", brand: "bmw"},
+    { name: "2023 Toyota RAV4 Hybrid", budget: "mid", type: "suv", fuel: "hybrid", brand: "toyota"},
+    { name: "2024 Tesla Model Y", budget: "high", type: "suv", fuel: "electric", brand: "tesla"},
+    { name: "2019 Ford Escape", budget: "mid", type: "suv", fuel: "gas", brand: "ford"},
+    { name: "2013 Volkswagen Touareg", budget: "low", type: "suv", fuel: "diesel", brand: "volkswagen"},
+    { name: "1995 Audi RS2", budget: "high", type: "sedan", fuel: "diesel", brand: "audi"},
+    { name: "2019 Volkswagen Touareg", budget: "mid", type: "suv", fuel: "gas", brand: "volkswagen"},
+    { name: "2022 Honda Civic", budget: "low", type: "sedan", fuel: "gas", brand: "honda"},
+    { name: "2021 Hyundai Elantra Hybrid", budget: "mid", type: "sedan", fuel: "hybrid", brand: "hyundai"},
+    { name: "2023 Chevrolet Silverado 1500", budget: "high", type: "truck", fuel: "gas", brand: "chevrolet"},
+    { name: "2023 Kia Sportage Hybrid", budget: "mid", type: "suv", fuel: "hybrid", brand: "kia"},
+    { name: "2018 Jeep Grand Cherokee", budget: "mid", type: "suv", fuel: "gas", brand: "jeep"},
+    { name: "2017 Subaru Outback", budget: "low", type: "wagon", fuel: "gas", brand: "subaru"},
+    { name: "2023 Rivian R1T", budget: "high", type: "truck", fuel: "electric", brand: "rivian"},
+    { name: "2016 Toyota Prius", budget: "low", type: "hatchback", fuel: "hybrid", brand: "toyota"},
+    { name: "2025 Ford Mustang Mach-E", budget: "high", type: "suv", fuel: "electric", brand: "ford"},
+    { name: "2019 Mazda CX-5", budget: "mid", type: "suv", fuel: "gas", brand: "mazda"},
+    { name: "2021 Honda Ridgeline", budget: "mid", type: "truck", fuel: "gas", brand: "honda"},
+    { name: "2022 Lucid Air", budget: "high", type: "sedan", fuel: "electric", brand: "lucid"},
+    { name: "2023 Hyundai Ioniq 5", budget: "high", type: "hatchback", fuel: "electric", brand: "hyundai"},
+    { name: "2020 Mercedes-Benz GLC", budget: "high", type: "suv", fuel: "gas", brand: "mercedes"},
+    { name: "2015 Kia Soul", budget: "low", type: "hatchback", fuel: "gas", brand: "kia"},
+    { name: "2022 Audi Q5 Plug-In Hybrid", budget: "high", type: "suv", fuel: "hybrid", brand: "audi"},
+    { name: "2022 Lexus ES 300h", budget: "high", type: "sedan", fuel: "hybrid", brand: "lexus"},
+    { name: "2016 Volvo V60 Cross Country", budget: "mid", type: "wagon", fuel: "gas", brand: "volvo"},
+    { name: "2019 Mitsubishi Outlander Sport", budget: "low", type: "suv", fuel: "gas", brand: "mitsubishi"},
+    { name: "2023 Fiat 500e", budget: "low", type: "hatchback", fuel: "electric", brand: "fiat"},
+    { name: "2023 Porsche Taycan Turbo S", budget: "very high", type: "sedan", fuel: "electric", brand: "porsche"},
+    { name: "2024 Tesla Model S Plaid", budget: "very high", type: "sedan", fuel: "electric", brand: "tesla"},
+    { name: "2024 Lucid Air Sapphire", budget: "very high", type: "sedan", fuel: "electric", brand: "lucid"},
+    { name: "2023 Audi RS e-tron GT", budget: "very high", type: "sedan", fuel: "electric", brand: "audi"},
+    { name: "2024 Maserati MC20", budget: "very high", type: "sedan", fuel: "gas", brand: "maserati"},
+    { name: "2023 Bentley Bentayga V8", budget: "very high", type: "suv", fuel: "gas", brand: "bentley"},
+    { name: "2023 Aston Martin DBX707", budget: "very high", type: "suv", fuel: "gas", brand: "aston martin"},
+    { name: "2023 Ferrari SF90 Stradale", budget: "very high", type: "coupe", fuel: "hybrid", brand: "ferrari"},
+    { name: "2022 Lamborghini Huracán STO", budget: "very high", type: "coupe", fuel: "gas", brand: "lamborghini"},
+    { name: "2023 McLaren Artura", budget: "very high", type: "coupe", fuel: "hybrid", brand: "mclaren"},
+    { name: "2023 Bugatti Chiron Super Sport", budget: "very high", type: "coupe", fuel: "gas", brand: "bugatti"},
+    { name: "2023 Koenigsegg Jesko Absolut", budget: "very high", type: "coupe", fuel: "gas", brand: "koenigsegg"},
+    { name: "2007 Pagani Zonda R", budget: "very high", type: "coupe", fuel: "gas", brand: "pagani"},
+    { name: "2024 Nissan Leaf", budget: "low", type: "hatchback", fuel: "electric", brand: "nissan"},
+    { name: "2020 Chevrolet Bolt EV", budget: "low", type: "hatchback", fuel: "electric", brand: "chevrolet"},
+    { name: "2023 Toyota Tacoma", budget: "mid", type: "truck", fuel: "gas", brand: "toyota"},
+    { name: "2021 RAM 1500", budget: "mid", type: "truck", fuel: "gas", brand: "ram"},
+    { name: "2022 Subaru Forester", budget: "mid", type: "suv", fuel: "gas", brand: "subaru"},
+    { name: "2024 Honda CR-V Hybrid", budget: "mid", type: "suv", fuel: "hybrid", brand: "honda"},
+    { name: "2023 BMW i4", budget: "high", type: "sedan", fuel: "electric", brand: "bmw"},
+    { name: "2024 Mercedes-Benz EQB", budget: "high", type: "suv", fuel: "electric", brand: "mercedes"},
+    { name: "2021 Kia K5", budget: "low", type: "sedan", fuel: "gas", brand: "kia"},
+    { name: "2022 Hyundai Tucson Hybrid", budget: "mid", type: "suv", fuel: "hybrid", brand: "hyundai"},
+    { name: "2018 Ford Fusion Hybrid", budget: "low", type: "sedan", fuel: "hybrid", brand: "ford"},
+    { name: "2024 Genesis GV70", budget: "high", type: "suv", fuel: "gas", brand: "genesis"},
+    { name: "2022 Jeep Wrangler 4xe", budget: "high", type: "suv", fuel: "hybrid", brand: "jeep"},
+    { name: "2023 Mini Cooper SE", budget: "mid", type: "hatchback", fuel: "electric", brand: "mini"},
+    { name: "2023 Polestar 2", budget: "high", type: "sedan", fuel: "electric", brand: "polestar"},
+    { name: "2020 Lincoln Corsair", budget: "mid", type: "suv", fuel: "gas", brand: "lincoln"},
+    { name: "2024 GMC Hummer EV", budget: "very high", type: "truck", fuel: "electric", brand: "gmc"},
+    { name: "2021 Cadillac Escalade", budget: "high", type: "suv", fuel: "electric", brand: "cadillac"},
+    { name: "2024 Alfa Romeo Tonale", budget: "high", type: "suv", fuel: "hybrid", brand: "alfa romeo"},
+    { name: "2023 Peugeot e-208", budget: "low", type: "hatchback", fuel: "electric", brand: "peugeot"},
+    { name: "2025 Lamborghini Revuelto", budget: "very high", type: "coupe", fuel: "hybrid", brand: "lamborghini"},
 ];
 
 var tableBody = document.querySelector("#carTable tbody");
 
 cars.forEach(car => {
-    var row = document.createElement("tr");
-    row.style.cursor = "pointer";
+    var tr = document.createElement("tr");
 
-    row.addEventListener("click", function () {
+    tr.addEventListener("click", function () {
         window.open(`https://www.google.com/search?q=${car.name}`, "_blank");
     });
 
     for (let i in car) {
         var td = document.createElement("td");
         td.textContent = car[i];
-        row.appendChild(td);
+        tr.appendChild(td);
     }
 
-    tableBody.appendChild(row);
+    tableBody.appendChild(tr);
 });
