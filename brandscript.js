@@ -77,6 +77,7 @@ function displayResults(cars, brand) {
 
     var heading = document.createElement("h2");
     heading.textContent = `Cars from ${brand}`;
+    heading.style.textTransform = "Capitalize";
     resultsContainer.appendChild(heading);
 
     var list = document.createElement("ul");
