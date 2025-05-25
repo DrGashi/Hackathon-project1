@@ -1,4 +1,4 @@
-var cars = [
+var cars = [ 
     { name: "2024 Toyota Corolla", budget: "low", type: "sedan", fuel: "gas", brand: "toyota"},
     { name: "2025 Tesla Model 3", budget: "high", type: "sedan", fuel: "electric", brand: "tesla"},
     { name: "2020 Ford F-150", budget: "mid", type: "truck", fuel: "gas", brand: "ford"},
@@ -63,6 +63,28 @@ var cars = [
     { name: "2024 Alfa Romeo Tonale", budget: "high", type: "suv", fuel: "hybrid", brand: "alfa romeo"},
     { name: "2023 Peugeot e-208", budget: "low", type: "hatchback", fuel: "electric", brand: "peugeot"},
     { name: "2025 Lamborghini Revuelto", budget: "very high", type: "coupe", fuel: "hybrid", brand: "lamborghini"},
+    { name: "2024 Toyota Camry", budget: "mid", type: "sedan", fuel: "gas", brand: "toyota"},
+    { name: "2023 Ford Bronco", budget: "mid", type: "suv", fuel: "gas", brand: "ford"},
+    { name: "2024 BMW X3", budget: "high", type: "suv", fuel: "gas", brand: "bmw"},
+    { name: "2025 Tesla Cybertruck", budget: "very high", type: "truck", fuel: "electric", brand: "tesla"},
+    { name: "2024 Honda Accord Hybrid", budget: "mid", type: "sedan", fuel: "hybrid", brand: "honda"},
+    { name: "2023 Chevrolet Tahoe", budget: "high", type: "suv", fuel: "gas", brand: "chevrolet"},
+    { name: "2024 Kia EV6", budget: "high", type: "hatchback", fuel: "electric", brand: "kia"},
+    { name: "2024 Jeep Gladiator", budget: "mid", type: "truck", fuel: "gas", brand: "jeep"},
+    { name: "2023 Subaru Crosstrek Hybrid", budget: "mid", type: "suv", fuel: "hybrid", brand: "subaru"},
+    { name: "2024 Mercedes-Benz S-Class", budget: "very high", type: "sedan", fuel: "gas", brand: "mercedes"},
+    { name: "2024 Audi A6", budget: "high", type: "sedan", fuel: "gas", brand: "audi"},
+    { name: "2023 Lexus RX 500h", budget: "high", type: "suv", fuel: "hybrid", brand: "lexus"},
+    { name: "2024 Volvo XC90 Recharge", budget: "high", type: "suv", fuel: "hybrid", brand: "volvo"},
+    { name: "2024 Mitsubishi Outlander PHEV", budget: "mid", type: "suv", fuel: "hybrid", brand: "mitsubishi"},
+    { name: "2024 Nissan Altima", budget: "low", type: "sedan", fuel: "gas", brand: "nissan"},
+    { name: "2023 RAM 2500", budget: "high", type: "truck", fuel: "gas", brand: "ram"},
+    { name: "2024 Hyundai Santa Fe", budget: "mid", type: "suv", fuel: "gas", brand: "hyundai"},
+    { name: "2023 Lincoln Navigator Black Label", budget: "very high", type: "suv", fuel: "gas", brand: "lincoln"},
+    { name: "2025 Cadillac CT5-V Blackwing", budget: "very high", type: "sedan", fuel: "gas", brand: "cadillac"},
+    { name: "2024 Genesis G90", budget: "high", type: "sedan", fuel: "gas", brand: "genesis"},
+    { name: "2024 Peugeot 3008 Hybrid", budget: "mid", type: "suv", fuel: "hybrid", brand: "peugeot"},
+    { name: "2023 Rivian R1S", budget:"high", type:"suv", fuel:"electric", brand:"rivian"}
 ];
 
 var tableBody = document.querySelector("#carTable tbody");

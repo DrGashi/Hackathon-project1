@@ -1,108 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Recommender</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Car Recommender</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="currentPage">Car Recommender</a></li>
-                <li><a href="database.html">Car Database</a></li>
-                <li><a href="brands.html">Brands</a></li>
-            </ul>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MatchMyRide - Car Recommender</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="favicon/favicon.ico">
+    </head>
+    <body>
+        <header>
+            <h1>Car Recommender</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="currentPage">Car Recommender</a></li>
+                    <li><a href="database.html">Car Database</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section class="form-section">
-            <h2>Select Your Preferences</h2>
-            <form id="car-form">
-                <label for="budget">Budget:</label>
-                <select id="budget">
-                    <option value="low">Below $20,000</option>
-                    <option value="mid">20k - 40k</option>
-                    <option value="high">Above $40,000</option>
-                    <option value="very high">Above $100,000</option>
-                </select>
+        <main>
+            <section class="form-section">
+                <a href="start.html" id="backBttn">&leftarrow; Back</a>
+                <h2>Select Your Preferences</h2>
+                <form id="car-form">
+                    <label for="budget">Budget:</label>
+                    <select id="budget">
+                        <option value="low">Below $20,000</option>
+                        <option value="mid">$20k - $50k</option>
+                        <option value="high">$50k - $100k</option>
+                        <option value="very high">Above $100,000</option>
+                    </select>
 
-                <label for="type">Car Type:</label>
-                <select id="type">
-                    <option value="sedan">Sedan</option>
-                    <option value="suv">SUV</option>
-                    <option value="truck">Truck</option>
-                    <option value="wagon">Wagon</option>
-                    <option value="hatchback">Hatchback</option>
-                    <option value="coupe">Coupé</option>
-                </select>
+                    <label for="type">Car Type:</label>
+                    <select id="type">
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="truck">Truck</option>
+                        <option value="wagon">Wagon</option>
+                        <option value="hatchback">Hatchback</option>
+                        <option value="coupe">Coupé</option>
+                    </select>
 
-                <label for="fuel">Fuel Type:</label>
-                <select id="fuel">
-                    <option value="gas">Gasoline</option>
-                    <option value="diesel">Diesel</option>
-                    <option value="electric">Electric</option>
-                    <option value="hybrid">Hybrid</option>
-                </select>
+                    <label for="fuel">Fuel Type:</label>
+                    <select id="fuel">
+                        <option value="gas">Gasoline</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="electric">Electric</option>
+                        <option value="hybrid">Hybrid</option>
+                    </select>
 
-                <label for="brand">Preferred Brand (optional):</label>
-                <select id="brand">
-                    <option value="any">Any</option>
-                    <option value="toyota">Toyota</option>
-                    <option value="tesla">Tesla</option>
-                    <option value="ford">Ford</option>
-                    <option value="bmw">BMW</option>
-                    <option value="volkswagen">Volkswagen</option>
-                    <option value="audi">Audi</option>
-                    <option value="chevrolet">Chevrolet</option>
-                    <option value="honda">Honda</option>
-                    <option value="hyundai">Hyundai</option>
-                    <option value="kia">Kia</option>
-                    <option value="jeep">Jeep</option>
-                    <option value="subaru">Subaru</option>
-                    <option value="rivian">Rivian</option>
-                    <option value="toyota">Toyota</option>
-                    <option value="mazda">Mazda</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="lucid">Lucid</option>
-                    <option value="lexus">Lexus</option>
-                    <option value="volvo">Volvo</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="maserati">Maserati</option>
-                    <option value="bentley">Bentley</option>
-                    <option value="aston martin">Aston Martin</option>
-                    <option value="porsche">Porsche</option>
-                    <option value="ferrari">Ferrari</option>
-                    <option value="lamborghini">Lamborghini</option>
-                    <option value="mclaren">McLaren</option>
-                    <option value="bugatti">Bugatti</option>
-                    <option value="koenigsegg">Koenigsegg</option>
-                    <option value="pagani">Pagani</option>
-                    <option value="ram">RAM</option>
-                    <option value="genesis">Genesis</option>
-                    <option value="mini">Mini</option>
-                    <option value="polestar">Polestar</option>
-                    <option value="lincoln">Lincoln</option>
-                    <option value="gmc">GMC</option>
-                    <option value="cadillac">Cadillac</option>
-                    <option value="alfa romeo">Alfa Romeo</option>
-                    <option value="peugeot">Peugeot</option>
-                </select>
+                    <label for="brand">Preferred Brand (optional):</label>
+                    <select id="brand">
+                        <option value="any">Any</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="tesla">Tesla</option>
+                        <option value="ford">Ford</option>
+                        <option value="bmw">BMW</option>
+                        <option value="volkswagen">Volkswagen</option>
+                        <option value="audi">Audi</option>
+                        <option value="chevrolet">Chevrolet</option>
+                        <option value="honda">Honda</option>
+                        <option value="hyundai">Hyundai</option>
+                        <option value="kia">Kia</option>
+                        <option value="jeep">Jeep</option>
+                        <option value="subaru">Subaru</option>
+                        <option value="rivian">Rivian</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="mazda">Mazda</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="lucid">Lucid</option>
+                        <option value="lexus">Lexus</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="mitsubishi">Mitsubishi</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="maserati">Maserati</option>
+                        <option value="bentley">Bentley</option>
+                        <option value="aston martin">Aston Martin</option>
+                        <option value="porsche">Porsche</option>
+                        <option value="ferrari">Ferrari</option>
+                        <option value="lamborghini">Lamborghini</option>
+                        <option value="mclaren">McLaren</option>
+                        <option value="bugatti">Bugatti</option>
+                        <option value="koenigsegg">Koenigsegg</option>
+                        <option value="pagani">Pagani</option>
+                        <option value="ram">RAM</option>
+                        <option value="genesis">Genesis</option>
+                        <option value="mini">Mini</option>
+                        <option value="polestar">Polestar</option>
+                        <option value="lincoln">Lincoln</option>
+                        <option value="gmc">GMC</option>
+                        <option value="cadillac">Cadillac</option>
+                        <option value="alfa romeo">Alfa Romeo</option>
+                        <option value="peugeot">Peugeot</option>
+                    </select>
 
-                <button type="submit">Recommend Car</button>
-            </form>
-        </section>
+                    <button type="submit">Recommend Car</button>
+                </form>
+            </section>
 
-        <section id="recommendation">
-            <h2>Recommended Car:</h2>
-            <div id="result"></div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
-</body>
+            <section id="recommendation">
+                <h2>Recommended Car:</h2>
+                <div id="result"></div>
+            </section>
+        </main>
+        <footer role="contentinfo">
+            <p>&copy; 2025 MatchMyRide. All rights reserved.</p>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
 </html>

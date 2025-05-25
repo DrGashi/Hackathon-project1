@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>MatchMyRide</title>
+        <meta name="description" content="MatchMyRide helps you find your perfect car from a large collection of cars and brands." />
+        <meta name="keywords" content="car, car recommender, brands, cars database, match car, automobile" />
+        <meta name="author" content="Dren Gashi">
+        <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" >
+        <link rel="stylesheet" href="css/startStyle.css">
+    </head>
+    <body>
+        <header role="banner">
+            <h1>Home</h1>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Car Recommender</a></li>
+                    <li><a href="database.html">Car Database</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="mainDiv" role="main">
+                <h2>MatchMyRide</h2>
+                <p>MatchMyRide is a free web tool that helps you find your perfect car.</p>
+                <a href="index.html" class="btn-primary" aria-label="Get started with MatchMyRide">Get Started</a>
+            </div>
+
+            <section class="about-section" aria-labelledby="car-collection">
+                <h1 id="car-collection">Car Collection</h1>
+                <p>We feature a growing list of awesome cars from various brands and types.</p>
+                <div class="car-card">
+                    <h2>Cars Available</h2>
+                    <div id="car-count" class="count" aria-live="polite" aria-atomic="true">100</div>
+                    <button class="plus-sign" aria-label="More cars info">+</button>
+                </div>
+            </section>
+
+            <section class="about-section" aria-labelledby="brand-collection">
+                <h1 id="brand-collection">Brand Collection</h1>
+                <p>We feature a growing list of awesome cars from various brands.</p>
+                <div class="car-card">
+                    <h2>Brands Available</h2>
+                    <div id="brand-count" class="count" aria-live="polite" aria-atomic="true">40</div>
+                    <button class="plus-sign" aria-label="More brands info">+</button>
+                </div>
+            </section>
+        </main>
+
+        <footer role="contentinfo">
+            <p>&copy; 2025 MatchMyRide. All rights reserved.</p>
+        </footer>
+
+        <script src="js/startScript.js"></script>
+    </body>
+</html>
