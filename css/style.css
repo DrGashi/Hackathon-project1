@@ -119,3 +119,9 @@ footer {
     width: 100%;
     bottom: 0;
 }
+.favorite-btn{
+    background-color: transparent;
+    border: none;
+    float: right;
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Favorites - MatchMyRide</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="favicon/favicon.ico" />
+</head>
+<body>
+  <header>
+    <h1>My Favorite Cars</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Car Recommender</a></li>
+        <li><a href="database.html">Car Database</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="favorites.html" class="currentPage">Favorites</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <a href="index.html" id="backBttn">&larr; Back to Recommender</a>
+      <h2>Your Favorite Cars</h2>
+      <div id="favorites-list">
+      </div>
+      <button id="clear-favorites" style="margin-top:20px;">Clear All Favorites</button>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 MatchMyRide. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const favoritesList = document.getElementById('favorites-list');
+    const clearBtn = document.getElementById('clear-favorites');
+
+    function loadFavorites() {
+      const favorites = JSON.parse(localStorage.getItem('favoriteCars') || "[]");
+      if(favorites.length === 0){
+        favoritesList.innerHTML = "<p>You have no favorite cars yet.</p>";
+        clearBtn.style.display = "none";
+      } else {
+        clearBtn.style.display = "inline-block";
+        favoritesList.innerHTML = favorites.map(car => `
+          <p><strong>${car.name}</strong></p>
+        `).join("");
+      }
+    }
+
+    clearBtn.addEventListener('click', () => {
+      if(confirm("Are you sure you want to clear all favorites?")){
+        localStorage.removeItem('favoriteCars');
+        loadFavorites();
+      }
+    });
+
+    loadFavorites();
+  </script>
+</body>
+</html>

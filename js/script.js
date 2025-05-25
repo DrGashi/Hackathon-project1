@@ -1,3 +1,4 @@
+
 document.getElementById('car-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -95,7 +96,6 @@ document.getElementById('car-form').addEventListener('submit', function(event) {
         { name: "2023 Rivian R1S", budget:"high", type:"suv", fuel:"electric", brand:"rivian"}
     ];
 
-    
     var matches = carDatabase.filter(car => 
         car.budget === budget &&
         car.type === type &&
@@ -105,10 +105,34 @@ document.getElementById('car-form').addEventListener('submit', function(event) {
 
     var result = document.getElementById('result');
     if (matches.length > 0) {
-        result.innerHTML = matches.map(car => `<p><strong>${car.name}</strong></p>`).join("");
+        result.innerHTML = matches.map((car, index) => `
+          <p>
+            <strong>${car.name}</strong>
+            <button class="favorite-btn" data-index="${index}">🤍</button>
+          </p>
+        `).join("");
     } else {
         result.innerHTML = "<p style='color: red'>No car matches your preferences!</p>";
     }
 
     document.getElementById('recommendation').style.display = 'block';
+
+    document.querySelectorAll('.favorite-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            button.textContent = "❤️";
+            var car = matches[button.getAttribute('data-index')];
+            addFavorite(car);
+        });
+    });
 });
+
+function addFavorite(car) {
+    let favorites = JSON.parse(localStorage.getItem('favoriteCars') || "[]");
+    if (!favorites.some(fav => fav.name === car.name)) {
+        favorites.push(car);
+        localStorage.setItem('favoriteCars', JSON.stringify(favorites));
+        alert(`${car.name} added to favorites!`);
+    } else {
+        alert(`${car.name} already favorited!`);
+    }
+}
