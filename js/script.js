@@ -131,7 +131,6 @@ function addFavorite(car) {
     if (!favorites.some(fav => fav.name === car.name)) {
         favorites.push(car);
         localStorage.setItem('favoriteCars', JSON.stringify(favorites));
-        alert(`${car.name} added to favorites!`);
     } else {
         alert(`${car.name} already favorited!`);
     }
